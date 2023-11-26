@@ -1,0 +1,17 @@
+[
+    {
+        "firstName": "John",
+        "lastName": "Rambo",
+        "avatarURL": "https://m.media-amazon.com/images/M/MV5BODBmOWU2YWMtZGUzZi00YzRhLWJjNDAtYTUwNWVkNDcyZmU5XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+        "firstName": "Cillian",
+        "lastName": "Murphy",
+        "avatarURL": "https://www.rollingstone.co.uk/wp-content/uploads/sites/2/2021/12/Cillian-Murphy-Peaky-Blinders.jpg"
+    },
+    {
+        "firstName": "John",
+        "lastName": "Rambo",
+        "avatarURL": "https://m.media-amazon.com/images/M/MV5BODBmOWU2YWMtZGUzZi00YzRhLWJjNDAtYTUwNWVkNDcyZmU5XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_FMjpg_UX1000_.jpg"
+    }
+]
