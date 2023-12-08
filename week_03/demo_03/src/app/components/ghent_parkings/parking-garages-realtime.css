@@ -1,0 +1,39 @@
+/*
+<ul className={`parking-garages`}>
+      {!!parkingStates && parkingStates.map((parkingState, index) => {
+        return (
+          <li className={`parking-garages__item`} key={index}>
+            <h2 className={`name`}>{parkingState.name}</h2>
+            <span className={`capacity`}>
+              <span className={`capacity__avalable`}>{parkingState.availablecapacity}</span>
+              <span className={`capacity__total`}>{parkingState.totalcapacity}</span>
+            </span>
+          </li>
+        )
+      })}
+    </ul>
+    */
+.parking-garages {
+  @apply flex flex-col items-start justify-center p-4;
+}
+
+.parking-garages__item {
+  @apply w-full flex flex-row items-center justify-between p-4 border-b-2 border-b-twe_blue-500;
+}
+
+.capacity--ok {
+  @apply text-twe_green-300;
+}
+
+.capacity--warning {
+  @apply text-twe_yellow-300;
+}
+
+.capacity--danger {
+  @apply text-twe_red-300;
+}
+
+.parking-garages__item:last-of-type {
+  border-bottom-color: transparent;
+}
+
