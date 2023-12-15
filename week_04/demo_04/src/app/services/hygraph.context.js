@@ -1,5 +1,5 @@
 // Import external modules
-import { ApolloClient, ApolloLink, ApolloProvider, HttpLink, InMemoryCache } from "@apollo/client";
+import { ApolloClient, ApolloLink, ApolloProvider, HttpLink, InMemoryCache, from } from "@apollo/client";
 
 // Import custom modules
 import { settings } from "../config";
@@ -14,8 +14,8 @@ const apolloLink = new ApolloLink((operation, forward) => {
   operation.setContext(({ headers = {} }) => ({
     headers: {
       ...headers,
-      Authorization: `Bearer ${settings.HYGRAPH_ACCESS_TOKEN}`,
-    },
+      authorization: `Bearer ${settings.HYGRAPH_ACCESS_TOKEN}`,
+    }
   }));
   return forward(operation);
 });
@@ -23,7 +23,7 @@ const apolloLink = new ApolloLink((operation, forward) => {
 // Create Apollo client and initialize it with the GraphQL endpoint
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: apolloLink.concat(apolloLink, httpLink),
+  link: from([apolloLink, httpLink]),
 });
 
 // Create a custom HygraphProvider
